@@ -13,7 +13,6 @@ var Stack = function() {
 var stackMethods = {};
 
 stackMethods.push = function(value) {
-  console.log(this.storage);
   this.count += 1;
   this.storage[this.count] = value;
 };
@@ -32,7 +31,3 @@ stackMethods.pop = function() {
 stackMethods.size = function () {
   return this.count;
 };
-
-
-
-

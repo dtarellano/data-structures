@@ -26,18 +26,16 @@ queueMethods.dequeue = function () {
     this.storage[first] = this.storage[key];
     first++;
   }
-  
+
   if (this.count === 0) {
     this.count = 0;
   } else {
     this.count--;
   }
-      
+
   return temp;
 };
 
 queueMethods.size = function () {
   return this.count;
 };
-
-

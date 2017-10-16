@@ -16,11 +16,9 @@ var Stack = function() {
 };
 
 var stackMethods = {};
-//debugger;
+
 stackMethods.push = function(value) {
-  console.log(this.storage);
   this.count += 1;
-  //console.log(someInstance);
   this.storage[this.count] = value;
 };
 
@@ -38,9 +36,3 @@ stackMethods.pop = function() {
 stackMethods.size = function () {
   return this.count;
 };
-
-
-
-
-
-
