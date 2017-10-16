@@ -19,14 +19,14 @@ BinarySearchTree.prototype.insert = function(value) {
       this.left.insert(value);
     }
   }
-  
+
   if (value > root) {
     if (this.right === null) {
       this.right = BinarySearchTree(value);
     } else {
       this.right.insert(value);
     }
-  }  
+  }
 };
 
 BinarySearchTree.prototype.contains = function (value) {
@@ -34,14 +34,13 @@ BinarySearchTree.prototype.contains = function (value) {
   if (this.value === value) {
     output = true;
   }
-  debugger;
   if (value < this.value && this.left !== null) {
     output = this.left.contains(value);
   }
   if (value > this.value && this.right !== null) {
     output = this.right.contains(value);
-  } 
-  return output; 
+  }
+  return output;
 };
 
 BinarySearchTree.prototype.depthFirstLog = function(callback) {
@@ -49,7 +48,7 @@ BinarySearchTree.prototype.depthFirstLog = function(callback) {
     callback(this.value);
   }
   if (this.left) {
-    this.left.depthFirstLog(callback); 
+    this.left.depthFirstLog(callback);
   }
   if (this.right) {
     this.right.depthFirstLog(callback);

@@ -26,11 +26,8 @@ setPrototype.remove = function(item) {
       this._storage.splice(i, 1);
     }
   }
-    // if item is in array, remove item
 };
 
 /*
  * Complexity: What is the time complexity of the above functions?
  */
- 
- 

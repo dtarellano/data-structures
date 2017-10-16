@@ -48,8 +48,8 @@ Graph.prototype.hasEdge = function(fromNode, toNode) {
         return true;
       } else {
         return false;
-      }     
-    }    
+      }
+    }
   } else {
     if (this.edges[fromNode] === toNode) {
       return true;
@@ -63,13 +63,12 @@ Graph.prototype.hasEdge = function(fromNode, toNode) {
 
 // Connects two nodes in a graph by adding an edge between them.
 Graph.prototype.addEdge = function(fromNode, toNode) {
-  //console.log(this.edges[fromNode]);
   if (this.edges[fromNode].indexOf(toNode) === -1) {
     this.edges[fromNode].push(toNode);
     this.edges[toNode].push(fromNode);
   }
 
-  
+
 };
 
 // Remove an edge between any two specified (by value) nodes.
@@ -89,5 +88,3 @@ Graph.prototype.forEachNode = function(cb) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-
-

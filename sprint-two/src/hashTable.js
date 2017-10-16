@@ -12,7 +12,7 @@ HashTable.prototype.insert = function(k, v) {
     // if no bucket, create bucket
   if (!bucket) {
     bucket = [];
-  } 
+  }
   // check if bucket doesnt have tuple
   for (var i = 0; i <= bucket.length; i++) {
 
@@ -41,17 +41,13 @@ HashTable.prototype.retrieve = function(k) {
 HashTable.prototype.remove = function(k) {
   var index = getIndexBelowMaxForKey(k, this._limit);
   var bucket = this._storage.get(index);
-  console.log(bucket)
-  
+
   // go through bucket
   for (var i = 0; i < bucket.length; i++) {
     if (bucket[i][0] === k) {
       bucket.splice(i, 1);
     }
   }
-    // find index with key value
-      //remove value
-
 };
 
 
@@ -59,5 +55,3 @@ HashTable.prototype.remove = function(k) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-
-
